@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <header class="panel hero">
+        <div>
+          <p class="label">8-BIT TASK HQ</p>
+          <h1>Retro Task Manager</h1>
+          <p class="tagline">Organize your day with neon energy.</p>
+        </div>
+        <div class="hero-badge">READY</div>
+      </header>
+
+      <section class="panel controls">
+        <form id="task-form">
+          <input id="task-input" type="text" placeholder="Add a new mission..." maxlength="60" required />
+          <select id="priority-select">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button type="submit">+ Add</button>
+        </form>
+      </section>
+
+      <section class="panel stats">
+        <div class="stat-card">
+          <span class="stat-label">Total</span>
+          <strong id="total-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Done</span>
+          <strong id="done-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Left</span>
+          <strong id="left-count">0</strong>
+        </div>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="list-header">
+          <h2>Mission Log</h2>
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="completed">Done</button>
+          </div>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
